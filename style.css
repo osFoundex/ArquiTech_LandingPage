@@ -41,9 +41,10 @@ body{
     }
 }
     
-
-
-
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .navbar a:hover{
     background-color: #C53508; 
