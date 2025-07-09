@@ -18,8 +18,8 @@
     </div>
   </div>
   <nav class="navbar">
-    <a>{{ 'navbar.home' | translate }}</a>
-    <a>{{ 'navbar.contact' | translate }}</a>
+      <a href="#home">{{ 'navbar.home' | translate }}</a>
+      <a href="#about">{{ 'navbar.contact' | translate }}</a>
     <a href="https://arquitech-front-end.netlify.app/">{{ 'navbar.login' | translate }}</a>
     <select (change)="changeLanguage($event)">
       <option value="en">English</option>
@@ -28,7 +28,7 @@
   </nav>
 </div>
 
-<header class="Header">
+<header id="home" class="Header">
   <div class="title">
     <h1>{{ 'header.title1' | translate }}</h1>
     <h1><span>{{ 'header.title2' | translate }}</span></h1>
@@ -148,7 +148,14 @@
   </div>
 </section>
 
-<section class="LastSection">
+<section class="VideoSection">
+    <div class="video-container">
+        <h2>Ver nuestro Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9PpofiMXhtw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section id="about" class="LastSection">
   <div class="Ready">
     <h2 [innerHTML]="'contact.title' | translate"></h2>
     <p>{{ 'contact.cta' | translate }}</p>
@@ -212,5 +219,37 @@
     </div>
   </div>
 </footer>
+
+<script>
+
+    const links = document.querySelectorAll('.navbar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            links.forEach(link => link.classList.remove('active')); // Eliminar la clase activa
+            this.classList.add('active'); // Agregar la clase activa al enlace actual
+        });
+    });
+
+    window.addEventListener('scroll', function() {
+        let current = '';
+        document.querySelectorAll('section').forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        links.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+
 </body>
 </html>
