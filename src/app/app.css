@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,11 +57,15 @@ body {
 .navbar a {
   width: 150px;
   margin: 0 auto;
+  text-decoration: none;
+  color: white;
 }
+
+
 @media (min-width: 700px) {
   .navbar a {
     text-align: center;
-    width: 200px;
+    width: auto;
   }
 }
 .Header {
@@ -276,48 +284,48 @@ p span {
 }
 .Services h2 {
   font-family: Saira condensed;
-  font-size: 50px;
+  font-size: 40px;
 }
 .Services h2 span {
   color: #C53508;
 }
 .ourservice p {
-  font-size: 20px;
+  font-size: 18px;
 }
 .Services_comp_cel_lap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   row-gap: 20px;
+
 }
 .ourservice {
   margin-bottom: 30px;
 }
 @media (min-width: 700px) {
   .Services_comp_cel_lap {
-    margin: 100px 140px;
+    margin: 50px 30px;
     flex-direction: row;
     justify-content: space-around;
   }
   .ourservice {
-    margin-bottom: 0;
-    font-size: 10px;
+    margin-bottom: 10px;
   }
   .ourservice p {
     font-family: Poppins;
-    font-size: 30px;
+    font-size: 22px;
   }
   .Services h2 {
     font-family: Saira condensed;
-    font-size: 80px;
+    font-size: 60px;
   }
 }
 .single_service {
   background-color: #DE7F1A;
-  margin: 0px 20px;
-  height: 430px;
-  width: 290px;
+  margin: 0px 15px;
+  height: 350px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -325,123 +333,133 @@ p span {
   position: relative;
 }
 .imagencuadradito img {
-  width: 250px;
-  height: 240px;
+  width: 200px;
+  height: 180px;
 }
 .cuadraditonegro {
   background-color: black;
-  height: 100px;
-  width: 290px;
-  padding: 20px 0px;
-  margin-bottom: 30px;
+  height: 80px;
+  width: 250px;
+  padding: 10px 0px;
+  margin-bottom: 20px;
 }
 .single_service h4 {
   font-family: Saira condensed;
-  font-size: 40px;
+  font-size: 28px;
   text-transform: uppercase;
   line-height: 1;
   color: white;
 }
+
 .Flexible-hours {
   background-color: #C53508;
   padding: 0px;
-  height: 26rem;
+  height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
+
 @media (min-width: 700px) {
   .Flexible-hours {
-    padding: 10px 10px;
-    height: 26rem;
-    display: flex;
+    padding: 10px;
+    height: auto;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0px;
   }
 }
+
 .Horarios-Flexibles {
   display: flex;
+
   align-items: center;
   flex-direction: column;
   padding: 20px 0px;
   margin-bottom: 20px;
+  text-align: center;
 }
+
 @media (min-width: 700px) {
   .Horarios-Flexibles {
-    margin: 0 200px;
+    margin: 0 50px;
     display: flex;
     align-items: start;
     flex-direction: column;
   }
 }
+
 .Horarios-Flexibles h2 {
   font-family: Saira condensed;
   font-size: 40px;
   line-height: 1;
   color: white;
   display: flex;
+  margin: 10px 0;
 }
+
 @media (min-width: 700px) {
   .Horarios-Flexibles h2 {
     font-size: 70px;
     line-height: 1;
   }
 }
+
 .Horarios-Flexibles a {
   background-color: black;
-  width: 140px;
+  width: 100%;
+  max-width: 240px;
   padding: 1px 10px;
   color: white;
   font-family: Saira condensed;
-  font-size: 34px;
+  font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
   text-align: center;
-  font-size: 20px;
 }
+
 @media (min-width: 700px) {
   .Horarios-Flexibles a {
     width: 240px;
     padding: 1px 10px;
-    font-size: 34px;
+    font-size: 20px;
     margin-top: 20px;
   }
 }
+
 .Horarios-Flexibles a:hover {
   background-color: #DE7F1A;
   cursor: pointer;
 }
+
 .img-horarios img {
   width: 100%;
-  height: 10rem;
+  height: auto;
+  max-width: 100%;
 }
+
 @media (min-width: 700px) {
   .img-horarios img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 40rem;
-    height: 20rem;
+    height: auto;
     margin-right: 160px;
   }
 }
+
+
 .comentarios {
   display: flex;
   flex-direction: column;
-  margin: 4px;
+  margin: 10px;
 }
-.comentarios h5 {
-  font-family: Poppins;
-  font-weight: normal;
-  font-size: 1.4rem;
-}
+
 @media (min-width: 700px) {
   .comentarios {
     flex-direction: row;
     margin: 0 5rem;
     justify-content: space-between;
   }
+
 }
 .HappyCustomers h2 {
   font-family: 'Saira Condensed';
@@ -455,7 +473,7 @@ p span {
   font-size: 20px;
   color: white;
   text-align: center;
-  margin-top: 70px;
+  margin-top: auto;
 }
 .HappyCustomers h3 {
   font-family: 'Saira Condensed';
@@ -466,13 +484,16 @@ p span {
 }
 .comment-box {
   background-color: #DE7F1A;
-  margin: 0px 20px;
-  height: 500px;
-  width: 290px;
+  padding: 0 25px;
+  margin: 0px 25px;
+  height: fit-content;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: fit-content;
+
 }
 .LastSection {
   display: flex;
@@ -680,4 +701,69 @@ p span {
 .text-container p {
   margin: 0;
   padding: 0;
+}
+
+.VideoSection {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+
+.video-container .h2{
+    font-family: "Saira Condensed";
+    font-size: 100rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.video-container {
+  text-align: center;
+  max-width: 80%;
+  margin: 65px auto;
+}
+
+.video-container video {
+  padding:  60px;
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: none;
+}
+
+
+.navbar select {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #C53508;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  font-family: Saira condensed;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar select:hover {
+  background-color: #A43B07;
+  transform: scale(1.05);
+}
+
+.navbar select:focus {
+  box-shadow: 0 0 5px 2px rgba(195, 53, 8, 0.5);
+}
+
+.navbar select option {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px;
+  font-size: 16px;
+  font-family: Saira condensed;
+}
+
+.navbar select option:hover {
+  background-color: #e5e5e5;
 }
